@@ -1,0 +1,384 @@
+/* ══════════════════════════════════════
+   sections.css — About, Rankings,
+   Timeline, Projets, Compétences
+══════════════════════════════════════ */
+
+/* ── ABOUT ── */
+.agrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.at p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1.95;
+  color: var(--muted);
+  margin-bottom: 1.3rem;
+}
+
+.at p strong {
+  color: var(--text);
+}
+
+.at p a {
+  color: var(--a);
+  border-bottom: 1px dashed var(--a);
+  transition: opacity 0.2s;
+}
+
+.at p a:hover {
+  opacity: 0.7;
+}
+
+/* Badge EU */
+.eub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--b);
+  border: 1px solid var(--b);
+  padding: 0.32rem 0.72rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.07em;
+}
+
+/* Grille d'infos */
+.ig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.ic {
+  background: var(--card);
+  padding: 1.2rem 1.35rem;
+  transition: background 0.2s;
+}
+
+.ic:hover {
+  background: var(--ch);
+}
+
+.icl {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.32rem;
+}
+
+.icv {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.icv.a { color: var(--a); }
+.icv.b { color: var(--b); }
+
+/* ── RANKINGS ── */
+.rg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.rc {
+  background: var(--card);
+  padding: 2rem 1.75rem;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.rc:hover {
+  background: var(--ch);
+}
+
+.rnum {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--a);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.rlab {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.55;
+}
+
+/* ── TIMELINE ── */
+.tl {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.tl::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.tli {
+  position: relative;
+  padding: 0 0 2.75rem 2.5rem;
+}
+
+.tli.last {
+  padding-bottom: 0;
+}
+
+.tli::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--a);
+  box-shadow: 0 0 10px var(--a);
+}
+
+.tld {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.tlr {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.18rem;
+}
+
+.tlo {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--a);
+  margin-bottom: 0.65rem;
+}
+
+.tldesc {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.82;
+}
+
+.tldesc strong {
+  color: var(--text);
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tag:hover { border-color: var(--a); color: var(--a); }
+.tag.a     { border-color: var(--a); color: var(--a); }
+.tag.b     { border-color: var(--b); color: var(--b); }
+
+/* ── PROJECTS ── */
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 1.75rem;
+}
+
+.pc {
+  background: var(--card);
+  padding: 1.7rem;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+}
+
+/* Barre de couleur au survol */
+.pc::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--a);
+  transition: width 0.3s;
+}
+
+.pc:hover::after { width: 100%; }
+.pc:hover        { background: var(--ch); }
+.pc.f::after     { background: var(--b); }
+
+.pco {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.38rem;
+}
+
+.pcn {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.pcd {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.78;
+  margin-bottom: 1.2rem;
+}
+
+.pcm {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pcl {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.63rem;
+  color: var(--b);
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.pcl.c { color: var(--c); }
+
+.pcl::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.pcst {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.63rem;
+  color: var(--muted);
+}
+
+.pcb {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.57rem;
+  padding: 0.15rem 0.48rem;
+  background: rgba(0, 200, 255, 0.07);
+  border: 1px solid var(--b);
+  color: var(--b);
+  letter-spacing: 0.05em;
+}
+
+.pcb.eu {
+  background: rgba(0, 255, 136, 0.05);
+  border-color: var(--a);
+  color: var(--a);
+}
+
+/* ── SKILLS ── */
+.scols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.sg {
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.sgh {
+  padding: 0.82rem 1.35rem;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--a);
+}
+
+.sgh.b { color: var(--b); }
+.sgh.c { color: var(--c); }
+
+.sr {
+  padding: 0.68rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.sr:last-child { border-bottom: none; }
+.sr:hover      { background: var(--ch); }
+
+.srn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+/* Barre de compétence */
+.sbar {
+  width: 100px;
+  height: 2px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.sf {
+  height: 100%;
+  background: var(--a);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sf.b { background: var(--b); }
+.sf.c { background: var(--c); }

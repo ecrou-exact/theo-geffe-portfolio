@@ -1,0 +1,60 @@
+/* ══════════════════════════════════════
+   themes.css — Variables de thème
+   Dark / Light / Hacker
+══════════════════════════════════════ */
+
+:root {
+  --transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg:     #080b10;
+  --bg2:    #0d1117;
+  --bg3:    #161b24;
+  --border: #21262d;
+  --text:   #e6edf3;
+  --muted:  #7d8590;
+  --a:      #00ff88;   /* accent vert */
+  --b:      #00c8ff;   /* accent bleu */
+  --c:      #ff6b35;   /* accent orange */
+  --nav:    rgba(8, 11, 16, 0.93);
+  --card:   #0d1117;
+  --ch:     #161b24;   /* card hover */
+}
+
+[data-theme="light"] {
+  --bg:     #f6f8fa;
+  --bg2:    #ffffff;
+  --bg3:    #eaeef2;
+  --border: #d0d7de;
+  --text:   #1f2328;
+  --muted:  #57606a;
+  --a:      #0a6640;
+  --b:      #0550ae;
+  --c:      #d73a49;
+  --nav:    rgba(246, 248, 250, 0.93);
+  --card:   #ffffff;
+  --ch:     #f6f8fa;
+}
+
+[data-theme="hacker"] {
+  --bg:     #000000;
+  --bg2:    #001100;
+  --bg3:    #002200;
+  --border: #004400;
+  --text:   #00ff41;
+  --muted:  #00aa2a;
+  --a:      #00ff41;
+  --b:      #39ff14;
+  --c:      #ff0040;
+  --nav:    rgba(0, 0, 0, 0.97);
+  --card:   #001100;
+  --ch:     #002200;
+}
+
+/* Police hacker */
+[data-theme="hacker"] body,
+[data-theme="hacker"] h1,
+[data-theme="hacker"] h2 {
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,51 @@
+/* ══════════════════════════════════════
+   responsive.css — Media queries
+══════════════════════════════════════ */
+
+/* ── Tablet / large mobile ── */
+@media (max-width: 960px) {
+
+  nav { padding: 0.85rem 1.5rem; }
+
+  .nl {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--nav);
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    z-index: 199;
+  }
+
+  .nl.open   { display: flex; }
+  .hbg       { display: flex; }
+  .stbadge   { display: none; }
+
+  #hero      { padding: 6rem 1.5rem 3rem; }
+
+  .agrid, .cgrid, .scols { grid-template-columns: 1fr; gap: 2rem; }
+
+  .sw        { padding: 4.5rem 1.5rem; }
+  footer     { padding: 1.5rem; flex-direction: column; text-align: center; }
+
+  .lb, .tb   { padding: 0.22rem 0.42rem; font-size: 0.56rem; }
+  .lsw       { gap: 0.2rem; padding-right: 0.5rem; }
+  .tsw       { gap: 0.2rem; }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 500px) {
+
+  .ig        { grid-template-columns: 1fr; }
+  .pgrid     { grid-template-columns: 1fr; }
+  h1.hn      { font-size: 2.8rem; }
+  .hstats    { gap: 1.5rem; }
+  .nav-right { gap: 0.3rem; }
+
+  /* Hide theme switcher on very small, keep lang */
+  .tsw       { display: none; }
+}

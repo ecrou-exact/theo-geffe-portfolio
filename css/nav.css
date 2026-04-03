@@ -1,0 +1,141 @@
+/* ══════════════════════════════════════
+   nav.css — Navigation sticky
+══════════════════════════════════════ */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 2.5rem;
+  background: var(--nav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+/* Logo */
+.logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.88rem;
+  color: var(--a);
+  letter-spacing: 0.05em;
+}
+
+.logo span { color: var(--muted); }
+
+/* Nav links */
+.nl {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nl a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.nl a:hover,
+.nl a.act {
+  color: var(--a);
+  border-bottom-color: var(--a);
+}
+
+/* Right side */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ── Language switcher ── */
+.lsw {
+  display: flex;
+  gap: 0.28rem;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  padding-right: 0.65rem;
+  margin-right: 0.15rem;
+}
+
+.lb {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  font-weight: 700;
+}
+
+.lb:hover { border-color: var(--b); color: var(--b); }
+.lb.on    { border-color: var(--a); color: var(--a); }
+
+[data-theme="hacker"] .lb.on { box-shadow: 0 0 8px var(--a); }
+
+/* ── Theme switcher ── */
+.tsw {
+  display: flex;
+  gap: 0.28rem;
+  align-items: center;
+}
+
+.tb {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.tb:hover, .tb.on { border-color: var(--a); color: var(--a); }
+[data-theme="hacker"] .tb.on { box-shadow: 0 0 8px var(--a); }
+
+/* ── Hamburger ── */
+.hbg {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: 0.3rem;
+}
+
+.hbg span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--muted);
+  transition: all 0.2s;
+}
+
+/* ── Loading pulse for stats ── */
+.stat-loading {
+  animation: statPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes statPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}

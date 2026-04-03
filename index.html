@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO META ═══ -->
+  <title>Théo Geffe — IT Developer & Cybersecurity Contributor | Luxembourg</title>
+  <meta name="description" content="Théo Geffe — IT Developer at CIRCL (Computer Incident Response Center Luxembourg). Co-author of rulezet-core, MISP Project contributor, EU-funded open-source cybersecurity developer. Specialist in CTI, YARA, Sigma.">
+  <meta name="keywords" content="Théo Geffe, IT Developer, CIRCL, Luxembourg, cybersecurity, open-source, MISP, YARA, Sigma, CTI, rulezet, NGSOTI, ecrou-exact, developer, cyber threat intelligence">
+  <meta name="author" content="Théo Geffe">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="en">
+  <meta name="revisit-after" content="7 days">
+  <link rel="canonical" href="https://ecrou-exact.github.io/theo-geffe-portfolio/">
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://ecrou-exact.github.io/theo-geffe-portfolio/">
+  <meta property="og:title"       content="Théo Geffe — IT Developer & Cybersecurity | Luxembourg">
+  <meta property="og:description" content="IT Developer at CIRCL Luxembourg. Co-author of rulezet-core (EU/FETTA funded), MISP contributor. Passionate about open-source, cybersecurity, drums and sports.">
+  <meta property="og:image"       content="https://avatars.githubusercontent.com/u/100565171?v=4">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:site_name"   content="Théo Geffe Portfolio">
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Théo Geffe — IT Developer & Cybersecurity | Luxembourg">
+  <meta name="twitter:description" content="IT Developer at CIRCL Luxembourg. Co-author of rulezet-core (EU-funded), MISP contributor.">
+  <meta name="twitter:image"       content="https://avatars.githubusercontent.com/u/100565171?v=4">
+
+  <!-- ═══ SCHEMA.ORG ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Théo Geffe",
+    "jobTitle": "IT Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CIRCL - Computer Incident Response Center Luxembourg",
+      "url": "https://www.circl.lu"
+    },
+    "url": "https://ecrou-exact.github.io/theo-geffe-portfolio/",
+    "image": "https://avatars.githubusercontent.com/u/100565171?v=4",
+    "sameAs": [
+      "https://github.com/ecrou-exact",
+      "https://www.linkedin.com/in/théo-geffe-348453359/",
+      "https://www.youtube.com/@jeff2.016"
+    ],
+    "knowsAbout": ["Cybersecurity", "JavaScript", "Python", "MISP", "YARA", "Sigma", "CTI", "Open-Source"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "LU",
+      "addressLocality": "Luxembourg"
+    },
+    "knowsLanguage": ["fr", "en"],
+    "description": "IT Developer at CIRCL Luxembourg, co-author of rulezet-core (EU co-funded under FETTA/NGSOTI), MISP Project contributor."
+  }
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ═══ STYLES ═══ -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Matrix background (hacker mode) -->
+  <canvas id="mx" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a class="logo" href="#hero" aria-label="Théo Geffe — Home">
+      theo<span>.</span>geffe<span>()</span>
+    </a>
+
+    <ul class="nl" id="nl" role="menubar">
+      <li role="none"><a href="#about"   role="menuitem" data-i18n="nav_about">About</a></li>
+      <li role="none"><a href="#exp"     role="menuitem" data-i18n="nav_exp">Experience</a></li>
+      <li role="none"><a href="#proj"    role="menuitem" data-i18n="nav_projects">Projects</a></li>
+      <li role="none"><a href="#skills"  role="menuitem" data-i18n="nav_skills">Skills</a></li>
+      <li role="none"><a href="#contact" role="menuitem" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Language switcher -->
+      <div class="lsw" role="group" aria-label="Language selector">
+        <button class="lb on" data-l="en"  aria-pressed="true">EN</button>
+        <button class="lb"    data-l="fr"  aria-pressed="false">FR</button>
+        <button class="lb"    data-l="de"  aria-pressed="false">DE</button>
+        <button class="lb"    data-l="it"  aria-pressed="false">IT</button>
+      </div>
+      <!-- Theme switcher -->
+      <div class="tsw" role="group" aria-label="Theme selector">
+        <button class="tb on" data-t="dark"   aria-pressed="true">Dark</button>
+        <button class="tb"    data-t="light"  aria-pressed="false">Light</button>
+        <button class="tb"    data-t="hacker" aria-pressed="false">Hacker</button>
+      </div>
+      <!-- Hamburger -->
+      <button class="hbg" id="hbg" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <div class="stbadge">
+      <div class="pulse" aria-hidden="true"></div>
+      <span data-i18n="hero_status">Available · Luxembourg 🇱🇺</span>
+    </div>
+
+    <div class="ey" data-i18n="hero_eyebrow">IT Developer &amp; Open-Source Contributor</div>
+
+    <h1 class="hn">
+      THÉO<br>
+      <span class="ghost">GEFFE</span><span class="dot" aria-hidden="true">.</span>
+    </h1>
+
+    <p class="sub">
+      <em>IT Dev @ CIRCL</em> · <span data-i18n="hero_sub">Luxembourg House of Cybersecurity</span>
+    </p>
+
+    <p class="hdesc" data-i18n="hero_desc">
+      Passionate developer building open-source cybersecurity tools used worldwide.<br>
+      Co-author of <strong>rulezet-core</strong> — co-funded by the <strong>European Union</strong> (FETTA/NGSOTI).<br>
+      Drummer 🥁 · Sports enthusiast ⚽ · Based in Luxembourg.
+    </p>
+
+    <div class="ctas">
+      <a class="bf" href="#proj"                                                        data-i18n="hero_cta1">See my projects</a>
+      <a class="bo" href="https://github.com/ecrou-exact" target="_blank" rel="noopener noreferrer" data-i18n="hero_cta2">GitHub →</a>
+      <a class="bo" href="#contact"                                                     data-i18n="hero_cta3">Contact me →</a>
+    </div>
+
+    <!-- Stats — repos & followers are populated live from GitHub API -->
+    <div class="hstats" aria-label="Statistics">
+      <div class="stat">
+        <div class="sn stat-loading" data-stat="repos">—</div>
+        <div class="sl" data-i18n="stat_repos">GitHub Repos</div>
+      </div>
+      <div class="stat">
+        <div class="sn stat-loading" data-stat="followers">—</div>
+        <div class="sl">Followers</div>
+      </div>
+      <div class="stat">
+        <div class="sn">63+</div>
+        <div class="sl" data-i18n="stat_stars">Cumulated Stars</div>
+      </div>
+      <div class="stat">
+        <div class="sn">🇪🇺</div>
+        <div class="sl" data-i18n="stat_eu">EU-Funded Project</div>
+      </div>
+    </div>
+
+    <div class="scr" aria-hidden="true" data-i18n="hero_scroll">Scroll to explore</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mband" aria-hidden="true">
+    <div class="min" id="mi"></div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <div class="sep"></div>
+  <section class="sw" id="about" aria-labelledby="about-title">
+    <div class="st"><span class="sn2">01 — </span><span data-i18n="sec_about">About</span></div>
+    <h2 class="stitle reveal" id="about-title" data-i18n="title_about">Who am I?</h2>
+
+    <div class="agrid reveal">
+      <div class="at">
+        <p data-i18n="about_p1">I'm <strong>Théo Geffe</strong>, an IT developer based in the <strong>Grand Duchy of Luxembourg</strong>. I work at <a href="https://www.circl.lu" target="_blank" rel="noopener noreferrer">CIRCL</a> — the <em>Computer Incident Response Center Luxembourg</em> — the national CERT responsible for cybersecurity incident response.</p>
+        <p data-i18n="about_p2">My work sits at the intersection of <strong>web development</strong> and <strong>cybersecurity</strong>. My flagship project, <strong>rulezet-core</strong>, is co-copyrighted with CIRCL and EU-funded under the <strong>FETTA</strong> project. Its live version — <a href="https://rulezet.org" target="_blank" rel="noopener noreferrer">rulezet.org</a> — indexes over <strong>122,000 detection rules</strong>.</p>
+        <p data-i18n="about_p3">Highly adaptable and deeply motivated, I was publicly recognized for my <strong>hard work</strong> on rulezet releases at the hack.lu workshop. Outside of code, I'm a passionate drummer and sports enthusiast.</p>
+        <div>
+          <span class="eub">🇪🇺 EU-Funded · NGSOTI · FETTA · DIGITAL-ECCC-2022-CYBER-03</span>
+        </div>
+      </div>
+
+      <div class="ig" role="list">
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_name">Full Name</div><div class="icv">Théo Geffe</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_role">Role</div><div class="icv a">IT Developer</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_org">Organisation</div><div class="icv b">CIRCL (lhc)</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_location">Location</div><div class="icv">Luxembourg 🇱🇺</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_github">GitHub</div><div class="icv">ecrou-exact</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_youtube">YouTube</div><div class="icv">@jeff2.016</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_passion1">Passion 1</div><div class="icv" data-i18n="ic_val_passion1">🥁 Drums</div></div>
+        <div class="ic" role="listitem"><div class="icl" data-i18n="ic_passion2">Passion 2</div><div class="icv" data-i18n="ic_val_passion2">⚽ Sports</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════ -->
+  <div class="sep"></div>
+  <section class="sw" id="exp" aria-labelledby="exp-title">
+    <div class="st"><span class="sn2">02 — </span><span data-i18n="sec_exp">Experience</span></div>
+    <h2 class="stitle reveal" id="exp-title" data-i18n="title_exp">Career</h2>
+
+    <div class="tl reveal" role="list">
+      <article class="tli" role="listitem">
+        <div class="tld" data-i18n="exp1_date">2024 — Present</div>
+        <div class="tlr" data-i18n="exp1_role">IT Developer</div>
+        <div class="tlo" data-i18n="exp1_org">CIRCL · Computer Incident Response Center Luxembourg</div>
+        <div class="tldesc" data-i18n="exp1_desc">Development and maintenance of open-source cybersecurity platforms at the Luxembourg national CERT. Legal co-author of <strong>rulezet-core</strong>. Active contributor to the MISP ecosystem via <strong>cti-transmute</strong>. Public release presentation at the international hack.lu workshop.</div>
+        <div class="tags">
+          <span class="tag a">JavaScript</span><span class="tag a">Python</span>
+          <span class="tag b">MISP</span><span class="tag b">YARA</span><span class="tag b">Sigma</span>
+          <span class="tag">Open-Source</span><span class="tag">Luxembourg</span>
+        </div>
+      </article>
+
+      <article class="tli" role="listitem">
+        <div class="tld" data-i18n="exp2_date">2024 — Present</div>
+        <div class="tlr" data-i18n="exp2_role">Open-Source Contributor · NGSOTI Project</div>
+        <div class="tlo" data-i18n="exp2_org">NGSOTI · European Union Funded</div>
+        <div class="tldesc" data-i18n="exp2_desc">Contribution to the NGSOTI project — funded by the Digital Europe programme (DIGITAL-ECCC-2022-CYBER-03, Project 101127921). Development of <strong>rulezet.org</strong> with similarity engine, MISP taxonomy integration, and full RESTful API.</div>
+        <div class="tags">
+          <span class="tag a">FETTA</span><span class="tag a">NGSOTI</span>
+          <span class="tag b">EU Digital</span><span class="tag b">CTI</span>
+          <span class="tag">Detection Engineering</span>
+        </div>
+      </article>
+
+      <article class="tli last" role="listitem">
+        <div class="tld" data-i18n="exp3_date">Active</div>
+        <div class="tlr" data-i18n="exp3_role">Contributor · MISP Project</div>
+        <div class="tlo" data-i18n="exp3_org">MISP — Malware Information Sharing Platform</div>
+        <div class="tldesc" data-i18n="exp3_desc">Contributing to the MISP project via <strong>cti-transmute</strong> — a CTI format conversion service (STIX, MISP, OpenCTI…). ⭐ 20 stars, used by security teams worldwide.</div>
+        <div class="tags">
+          <span class="tag b">CTI</span><span class="tag b">STIX</span>
+          <span class="tag">Interoperability</span><span class="tag">JavaScript</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════ -->
+  <div class="sep"></div>
+  <section class="sw" id="proj" aria-labelledby="proj-title">
+    <div class="st"><span class="sn2">03 — </span><span data-i18n="sec_projects">Projects</span></div>
+    <h2 class="stitle reveal" id="proj-title" data-i18n="title_projects">Open-source projects</h2>
+
+    <div class="pgrid reveal" role="list">
+      <a class="pc f" href="https://github.com/ngsoti/rulezet-core" target="_blank" rel="noopener noreferrer" role="listitem">
+        <div class="pco" data-i18n="proj1_org">ngsoti · CIRCL · EU-Funded</div>
+        <div class="pcn" data-i18n="proj1_name">rulezet-core ✦</div>
+        <div class="pcd" data-i18n="proj1_desc">Open-source platform for sharing, evaluating and managing cyber detection rules (YARA, Sigma, Suricata…). Available at rulezet.org with 122,000+ rules. Similarity engine, MISP integration, RESTful API. Recognized at hack.lu workshop 2025.</div>
+        <div class="pcm">
+          <span class="pcl">JavaScript</span>
+          <span class="pcst">⭐ 43</span>
+          <span class="pcb eu">🇪🇺 EU-Funded</span>
+          <span class="pcb">co-author</span>
+        </div>
+      </a>
+
+      <a class="pc" href="https://github.com/MISP/cti-transmute" target="_blank" rel="noopener noreferrer" role="listitem">
+        <div class="pco" data-i18n="proj2_org">MISP Project</div>
+        <div class="pcn" data-i18n="proj2_name">cti-transmute</div>
+        <div class="pcd" data-i18n="proj2_desc">CTI format conversion service (STIX, MISP, OpenCTI…). Promotes interoperability between security tools. Available live at cti-transmute.org.</div>
+        <div class="pcm">
+          <span class="pcl">JavaScript</span>
+          <span class="pcst">⭐ 20</span>
+          <span class="pcb">MISP</span>
+        </div>
+      </a>
+
+      <a class="pc" href="https://github.com/DavidCruciani/ptit-crolle" target="_blank" rel="noopener noreferrer" role="listitem">
+        <div class="pco" data-i18n="proj3_org">DavidCruciani</div>
+        <div class="pcn" data-i18n="proj3_name">ptit-crolle</div>
+        <div class="pcd" data-i18n="proj3_desc">Flask application template to quickly bootstrap a Python web project. Active contributor. ⭐ 5 stars.</div>
+        <div class="pcm">
+          <span class="pcl c">JavaScript</span>
+          <span class="pcst">⭐ 5</span>
+          <span class="pcb">Flask</span>
+        </div>
+      </a>
+
+      <a class="pc" href="https://rulezet.org" target="_blank" rel="noopener noreferrer" role="listitem">
+        <div class="pco" data-i18n="proj4_org">Live Service</div>
+        <div class="pcn" data-i18n="proj4_name">rulezet.org 🌐</div>
+        <div class="pcd" data-i18n="proj4_desc">The public live version of rulezet-core. 122,000+ security rules. Integrated with vulnerability-lookup.org for real-time rule/CVE correlation.</div>
+        <div class="pcm">
+          <span class="pcst" data-i18n="badge_live">🌍 Live</span>
+          <span class="pcb eu" data-i18n="badge_public">Public</span>
+        </div>
+      </a>
+    </div>
+
+    <a class="bo reveal" href="https://github.com/ecrou-exact" target="_blank" rel="noopener noreferrer" data-i18n="proj_see_all">
+      See all repos on GitHub →
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SKILLS
+  ══════════════════════════════════ -->
+  <div class="sep"></div>
+  <section class="sw" id="skills" aria-labelledby="skills-title">
+    <div class="st"><span class="sn2">04 — </span><span data-i18n="sec_skills">Skills</span></div>
+    <h2 class="stitle reveal" id="skills-title" data-i18n="title_skills">Technical skills</h2>
+
+    <div class="scols reveal">
+      <!-- Left column -->
+      <div>
+        <div class="sg">
+          <div class="sgh"     data-i18n="sg1_title">// Languages &amp; Frameworks</div>
+          <div class="sr"><span class="srn" data-i18n="skill_js">JavaScript / Node.js</span>  <div class="sbar"><div class="sf"   data-w=".9"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_py">Python / Flask</span>         <div class="sbar"><div class="sf"   data-w=".85"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_html">HTML / CSS</span>           <div class="sbar"><div class="sf"   data-w=".88"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_sql">SQL / Databases</span>       <div class="sbar"><div class="sf"   data-w=".72"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_bash">Bash / Shell</span>         <div class="sbar"><div class="sf"   data-w=".7"></div></div></div>
+        </div>
+
+        <br>
+
+        <!-- Languages (spoken) + Soft Skills -->
+        <div class="sg">
+          <div class="sgh c"   data-i18n="sg3_title">// Soft Skills &amp; Languages</div>
+          <div class="sr"><span class="srn" data-i18n="skill_french">🇫🇷 French (Native)</span>   <div class="sbar"><div class="sf c" data-w="1"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_english">🇬🇧 English (Fluent)</span>  <div class="sbar"><div class="sf c" data-w=".85"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_drums">🥁 Drums</span>               <div class="sbar"><div class="sf c" data-w=".92"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_sport">⚽ Sport &amp; Teamwork</span><div class="sbar"><div class="sf c" data-w=".95"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_adapt">🚀 Adaptability</span>        <div class="sbar"><div class="sf c" data-w=".93"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div>
+        <div class="sg">
+          <div class="sgh b"   data-i18n="sg2_title">// Cybersecurity &amp; CTI</div>
+          <div class="sr"><span class="srn" data-i18n="skill_yara">YARA / Sigma / Suricata</span> <div class="sbar"><div class="sf b" data-w=".82"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_misp">MISP / CTI platforms</span>    <div class="sbar"><div class="sf b" data-w=".85"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_stix">STIX / OpenCTI</span>          <div class="sbar"><div class="sf b" data-w=".75"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_linux">Linux / Docker</span>         <div class="sbar"><div class="sf b" data-w=".74"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_git">Git / GitHub</span>             <div class="sbar"><div class="sf b" data-w=".9"></div></div></div>
+          <div class="sr"><span class="srn" data-i18n="skill_api">REST API / JSON</span>          <div class="sbar"><div class="sf b" data-w=".88"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CONTACT
+  ══════════════════════════════════ -->
+  <div class="sep"></div>
+  <section class="sw" id="contact" aria-labelledby="contact-title">
+    <div class="st"><span class="sn2">05 — </span><span data-i18n="sec_contact">Contact</span></div>
+    <h2 class="stitle reveal" id="contact-title" data-i18n="title_contact">Let's get in touch</h2>
+
+    <div class="cgrid reveal">
+      <div>
+        <p class="cl" data-i18n="contact_lead">Have a project, an idea, an opportunity?<br>Want to contribute to open-source, talk cybersecurity, CTI… or drums?<br><strong>Find me on my networks.</strong></p>
+
+        <nav class="ss" aria-label="Social networks">
+          <a class="srow" href="https://www.linkedin.com/in/th%C3%A9o-geffe-348453359/" target="_blank" rel="noopener noreferrer">
+            <div class="srl"><div class="sic">in</div><div><div class="snm">LinkedIn</div><div class="shd">Théo Geffe</div></div></div>
+            <span class="sarr" aria-hidden="true">→</span>
+          </a>
+          <a class="srow" href="https://github.com/ecrou-exact" target="_blank" rel="noopener noreferrer">
+            <div class="srl"><div class="sic" style="font-size:.6rem;">gh</div><div><div class="snm">GitHub</div><div class="shd">ecrou-exact</div></div></div>
+            <span class="sarr" aria-hidden="true">→</span>
+          </a>
+          <a class="srow" href="https://www.facebook.com/people/Th%C3%A9o-Geffe/pfbid024kxkSgjGqZXkdiEmrsVvzE1ZGVvGhqHWQ1d2nc8NzDsk7mdJGco8UWjtNep5Ngq9l/" target="_blank" rel="noopener noreferrer">
+            <div class="srl"><div class="sic" style="font-weight:700;">fb</div><div><div class="snm">Facebook</div><div class="shd">Théo Geffe</div></div></div>
+            <span class="sarr" aria-hidden="true">→</span>
+          </a>
+          <a class="srow" href="https://www.youtube.com/@jeff2.016" target="_blank" rel="noopener noreferrer">
+            <div class="srl"><div class="sic" style="color:#ff4444;font-size:.8rem;">▶</div><div><div class="snm">YouTube</div><div class="shd">@jeff2.016</div></div></div>
+            <span class="sarr" aria-hidden="true">→</span>
+          </a>
+          <a class="srow" href="https://rulezet.org" target="_blank" rel="noopener noreferrer">
+            <div class="srl"><div class="sic" style="font-size:.58rem;">rz</div><div><div class="snm">rulezet.org</div><div class="shd">My EU live project</div></div></div>
+            <span class="sarr" aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="qfc">
+        <div class="qft" data-i18n="qf_title">// Quick info</div>
+        <div class="qr"><span class="qk" data-i18n="qf_name">Full Name</span>   <span class="qv">Théo Geffe</span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_role">Role</span>         <span class="qv">IT Developer</span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_employer">Employer</span> <span class="qv"><a href="https://www.circl.lu" target="_blank" rel="noopener noreferrer">CIRCL (lhc)</a></span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_location">Location</span> <span class="qv">Luxembourg 🇱🇺</span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_eu">EU Project</span>     <span class="qv"><a href="https://rulezet.org" target="_blank" rel="noopener noreferrer">rulezet.org</a></span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_contrib">Contributions</span> <span class="qv ac" data-stat="followers">—</span></div>
+        <div class="qr"><span class="qk" data-i18n="qf_avail">Availability</span><span class="qv ac" data-i18n="qf_avail_val">● Available</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div>© 2025 <span class="fc">Théo Geffe</span> — <span data-i18n="footer_rights">All rights reserved.</span></div>
+    <div><span data-i18n="footer_built">Built with ❤️ in</span> <span class="fc">Luxembourg 🇱🇺</span></div>
+    <a href="https://github.com/ecrou-exact" target="_blank" rel="noopener noreferrer" class="flink">github/ecrou-exact</a>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="btt" title="Back to top" aria-label="Back to top of page">↑</button>
+
+  <!-- ═══ SCRIPTS (order matters) ═══ -->
+  <script src="js/i18n.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/backtotop.js"></script>
+  <script src="js/github-stats.js"></script>
+  <!-- Init i18n after all scripts loaded -->
+  <script>document.addEventListener('DOMContentLoaded', initI18n);</script>
+</body>
+</html>
