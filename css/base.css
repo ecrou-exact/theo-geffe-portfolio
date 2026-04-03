@@ -19,6 +19,19 @@ body {
   overflow-x: hidden;
   transition: var(--transition);
 }
+.pp {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: block;
+  margin-bottom: 2rem;
+  animation: fadeLeft 0.7s 1.1s forwards;
+  opacity: 0
+}
+
 
 a {
   color: inherit;
@@ -167,6 +180,11 @@ footer {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(17px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-26px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes blink {

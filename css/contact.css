@@ -24,7 +24,7 @@
 
 /* Stack de liens sociaux */
 .ss {
-  display: flex;
+  display: contents;
   flex-direction: column;
   gap: 1px;
   background: var(--border);
