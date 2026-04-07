@@ -196,3 +196,23 @@ footer {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+
+.about-img-wrap {
+  margin-top: 1.8rem;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
