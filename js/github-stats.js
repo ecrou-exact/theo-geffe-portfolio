@@ -1,68 +1,25 @@
-/**
- * github-stats.js
- * Fetches live GitHub stats for ecrou-exact via the public API.
- * Updates the hero stats section dynamically.
- * Falls back to placeholder values if the API is unavailable.
- */
+(function () {
+  var FALLBACK = { repos: 21, followers: 9 };
 
-const GITHUB_USER = 'ecrou-exact';
-const GITHUB_API  = `https://api.github.com/users/${GITHUB_USER}`;
-
-// DOM targets (data-stat attributes)
-const STAT_MAP = {
-  repos:    '[data-stat="repos"]',
-  followers:'[data-stat="followers"]',
-};
-
-async function fetchGitHubStats() {
-  try {
-    const res  = await fetch(GITHUB_API, {
-      headers: { 'Accept': 'application/vnd.github.v3+json' }
+  function paint(key, value) {
+    document.querySelectorAll('[data-stat="' + key + '"]').forEach(function (el) {
+      el.textContent = value;
+      el.classList.remove('loading');
     });
-
-    if (!res.ok) throw new Error(`GitHub API ${res.status}`);
-    const data = await res.json();
-
-    // Update repos count
-    const reposEl = document.querySelector(STAT_MAP.repos);
-    if (reposEl && data.public_repos != null) {
-      animateCount(reposEl, data.public_repos);
-    }
-
-    // Update followers count
-    const followersEl = document.querySelector(STAT_MAP.followers);
-    if (followersEl && data.followers != null) {
-      animateCount(followersEl, data.followers);
-    }
-
-    // Remove loading state
-    document.querySelectorAll('.stat-loading').forEach(el => {
-      el.classList.remove('stat-loading');
-    });
-
-  } catch (err) {
-    console.warn('GitHub API unavailable — showing fallback values.', err);
-    // Fallback: leave the static HTML values as-is
-  }
-}
-
-// Smooth count-up animation
-function animateCount(el, target) {
-  const duration = 1200;
-  const start    = performance.now();
-  const from     = 0;
-
-  function step(now) {
-    const elapsed  = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    // Ease out cubic
-    const eased    = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(from + (target - from) * eased);
-    if (progress < 1) requestAnimationFrame(step);
   }
 
-  requestAnimationFrame(step);
-}
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!document.querySelector('[data-stat]')) return;
 
-// Run after DOM is ready
-document.addEventListener('DOMContentLoaded', fetchGitHubStats);
+    fetch('https://api.github.com/users/ecrou-exact')
+      .then(function (r) { if (!r.ok) throw new Error('rate-limited'); return r.json(); })
+      .then(function (data) {
+        paint('repos', data.public_repos + '+');
+        paint('followers', data.followers + '+');
+      })
+      .catch(function () {
+        paint('repos', FALLBACK.repos + '+');
+        paint('followers', FALLBACK.followers + '+');
+      });
+  });
+})();

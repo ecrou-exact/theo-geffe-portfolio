@@ -1,42 +1,23 @@
-/**
- * theme.js
- * Gestion du sélecteur de thème Dark / Light / Hacker
- * Persiste le choix dans localStorage
- */
+(function () {
+  var root = document.documentElement;
+  var saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
 
-const THEME_KEY = 'theo-geffe-theme';
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    document.querySelectorAll('.tsw [data-t]').forEach(function (btn) {
+      var on = btn.getAttribute('data-t') === theme;
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
 
-const themeBtns = document.querySelectorAll('.tb');
-const root = document.documentElement;
-
-// Appliquer un thème
-function applyTheme(theme) {
-  root.setAttribute('data-theme', theme);
-
-  themeBtns.forEach(btn => {
-    const isActive = btn.dataset.t === theme;
-    btn.classList.toggle('on', isActive);
-    btn.setAttribute('aria-pressed', String(isActive));
+  document.addEventListener('DOMContentLoaded', function () {
+    var current = root.getAttribute('data-theme') || 'dark';
+    apply(current);
+    document.querySelectorAll('.tsw [data-t]').forEach(function (btn) {
+      btn.addEventListener('click', function () { apply(btn.getAttribute('data-t')); });
+    });
   });
-
-  // Sauvegarder le choix
-  try {
-    localStorage.setItem(THEME_KEY, theme);
-  } catch (_) {}
-}
-
-// Charger le thème sauvegardé ou dark par défaut
-function loadSavedTheme() {
-  try {
-    const saved = localStorage.getItem(THEME_KEY);
-    if (saved) applyTheme(saved);
-  } catch (_) {}
-}
-
-// Événements sur les boutons
-themeBtns.forEach(btn => {
-  btn.addEventListener('click', () => applyTheme(btn.dataset.t));
-});
-
-// Init
-loadSavedTheme();
+})();

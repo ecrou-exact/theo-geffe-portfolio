@@ -1,0 +1,102 @@
+/* ═══════════════════════════════════════════════════════════
+   PAGE-SPECIFIC LAYOUT
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Hero (home) ─── */
+.hero {
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+.hero-id {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+.hero-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+  flex: none;
+}
+.stbadge {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--text-dim);
+}
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  flex: none;
+  box-shadow: 0 0 0 0 var(--accent-2-soft);
+  animation: pulse 2.2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--accent-2-soft); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.hero-copy .eyebrow { margin-bottom: 1.1rem; }
+.hero-copy h1 { margin-bottom: 1.3rem; }
+.hero-copy .lede { margin-bottom: 2rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+
+.page-head { padding: 3rem 0 1rem; }
+.page-head .eyebrow { margin-bottom: 1rem; }
+.page-head .lede { margin-top: 1rem; }
+
+/* ─── About ─── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+.about-copy > p { max-width: 46em; }
+.about-badge {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--accent-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  padding: .5em 1em;
+}
+.signal-notes { margin-top: 2.2rem; display: flex; flex-direction: column; gap: .9rem; }
+.signal-note {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  gap: .8rem;
+  font-size: .95rem;
+  color: var(--text-dim);
+}
+.signal-note .ic { color: var(--accent); }
+
+/* ─── Projects ─── */
+.proj-filter-note {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--text-faint);
+  margin-bottom: 2.4rem;
+}
+
+/* ─── Contact ─── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 3.5rem;
+  align-items: start;
+}

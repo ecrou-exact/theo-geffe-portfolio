@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <title>Experience — Théo Geffe</title>
+  <meta name="description" content="Théo Geffe's career timeline — CIRCL, NGSOTI, and the MISP project.">
+  <link rel="canonical" href="https://ecrou-exact.github.io/theo-geffe-portfolio/experience.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="experience">
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a class="logo" href="index.html" aria-label="Théo Geffe — Home">theo<span>.</span>geffe<span>()</span></a>
+    <ul class="nl" id="nl" role="menubar">
+      <li role="none"><a href="about.html" data-page="about" role="menuitem" data-i18n="nav_about">About</a></li>
+      <li role="none"><a href="experience.html" data-page="experience" role="menuitem" data-i18n="nav_experience">Experience</a></li>
+      <li role="none"><a href="projects.html" data-page="projects" role="menuitem" data-i18n="nav_projects">Projects</a></li>
+      <li role="none"><a href="contact.html" data-page="contact" role="menuitem" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="swgroup lsw" role="group" aria-label="Language">
+        <button data-l="en" class="on" aria-pressed="true">EN</button>
+        <button data-l="fr" aria-pressed="false">FR</button>
+      </div>
+      <div class="swgroup tsw" role="group" aria-label="Theme">
+        <button data-t="dark" class="on" aria-pressed="true">Dark</button>
+        <button data-t="light" aria-pressed="false">Light</button>
+      </div>
+      <button class="hbg" id="hbg" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="wrap page-head">
+      <div class="eyebrow reveal" data-i18n="exp_eyebrow">Experience</div>
+      <h1 class="display reveal" style="font-size:clamp(2rem,4.4vw,3.2rem);" data-i18n="exp_title">Career</h1>
+      <p class="lede reveal" data-i18n="exp_lede">What I've built, and for whom.</p>
+    </div>
+
+    <section class="wrap">
+      <div class="timeline reveal-group">
+        <article class="tl-item">
+          <div class="tl-date" data-i18n="exp1_date">2024 — Present</div>
+          <div>
+            <div class="tl-role" data-i18n="exp1_role">IT Developer</div>
+            <div class="tl-org" data-i18n="exp1_org">CIRCL</div>
+            <p class="tl-desc" data-i18n="exp1_desc">—</p>
+            <div class="tl-tags">
+              <span class="tag accent">JavaScript</span><span class="tag accent">Python</span>
+              <span class="tag accent2">MISP</span><span class="tag accent2">YARA</span><span class="tag accent2">Sigma</span>
+              <span class="tag">Open-Source</span><span class="tag">Luxembourg</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <div class="tl-date" data-i18n="exp2_date">2024 — Present</div>
+          <div>
+            <div class="tl-role" data-i18n="exp2_role">Open-Source Contributor · NGSOTI</div>
+            <div class="tl-org" data-i18n="exp2_org">NGSOTI · EU Funded</div>
+            <p class="tl-desc" data-i18n="exp2_desc">—</p>
+            <div class="tl-tags">
+              <span class="tag accent">FETTA</span><span class="tag accent">NGSOTI</span>
+              <span class="tag accent2">EU Digital</span><span class="tag accent2">CTI</span>
+              <span class="tag">Detection Engineering</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <div class="tl-date" data-i18n="exp3_date">Active</div>
+          <div>
+            <div class="tl-role" data-i18n="exp3_role">Contributor · MISP Project</div>
+            <div class="tl-org" data-i18n="exp3_org">MISP</div>
+            <p class="tl-desc" data-i18n="exp3_desc">—</p>
+            <div class="tl-tags">
+              <span class="tag accent2">CTI</span><span class="tag accent2">STIX</span>
+              <span class="tag">Interoperability</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <div>© 2026 Théo Geffe — <span data-i18n="footer_rights">All rights reserved.</span></div>
+      <div><span data-i18n="footer_built">Built in</span> Luxembourg 🇱🇺 · <a href="https://github.com/ecrou-exact" target="_blank" rel="noopener noreferrer">github/ecrou-exact</a></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initI18n);</script>
+</body>
+
+</html>

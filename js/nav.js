@@ -1,53 +1,25 @@
-/**
- * nav.js
- * Navigation: hamburger mobile + active links on scroll
- */
-
-const hamburger = document.getElementById('hbg');
-const navList   = document.getElementById('nl');
-const navLinks  = document.querySelectorAll('.nl a');
-
-// ── Hamburger ──
-if (hamburger && navList) {
-  hamburger.addEventListener('click', () => {
-    const isOpen = navList.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
-      navList.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var hbg = document.getElementById('hbg');
+    var nl = document.getElementById('nl');
+    if (hbg && nl) {
+      hbg.addEventListener('click', function () {
+        var open = nl.classList.toggle('open');
+        hbg.classList.toggle('open', open);
+        hbg.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nl.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nl.classList.remove('open');
+          hbg.classList.remove('open');
+          hbg.setAttribute('aria-expanded', 'false');
+        });
+      });
     }
-  });
 
-  // Close after nav link click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
+    var here = document.body.getAttribute('data-page');
+    document.querySelectorAll('.nl a[data-page]').forEach(function (a) {
+      if (a.getAttribute('data-page') === here) a.setAttribute('aria-current', 'page');
     });
   });
-}
-
-// ── Active link on scroll ──
-const sectionIds = ['hero', 'about', 'exp', 'proj', 'skills', 'contact'];
-
-sectionIds.forEach(id => {
-  const section = document.getElementById(id);
-  if (!section) return;
-
-  new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(a => {
-            a.classList.toggle('act', a.getAttribute('href') === '#' + id);
-          });
-        }
-      });
-    },
-    { threshold: 0.25 }
-  ).observe(section);
-});
+})();

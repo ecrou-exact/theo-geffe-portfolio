@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Dark = deep graphite console. Light = warm paper.
+   Two accents, each with one job:
+     --accent   (amber)  → the "match" colour — hits, emphasis, CTAs
+     --accent-2 (teal)   → the "trace" colour — links, data, secondary signal
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --container: 1120px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --dur-s: .18s;
+  --dur-m: .4s;
+  --dur-l: .7s;
+}
+
+/* ─── Dark (default) ─── */
+:root,
+[data-theme="dark"] {
+  --bg: #0c0f12;
+  --bg-raised: #14181d;
+  --bg-raised-2: #1a1f25;
+  --text: #edeae2;
+  --text-dim: #97a0a8;
+  --text-faint: #5b636b;
+  --border: #262c32;
+  --border-strong: #363e46;
+
+  --accent: #e3a542;
+  --accent-soft: #e3a54222;
+  --accent-ink: #17130a;
+
+  --accent-2: #56b8ac;
+  --accent-2-soft: #56b8ac1f;
+
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, .55);
+}
+
+/* ─── Light ─── */
+[data-theme="light"] {
+  --bg: #f5f3ee;
+  --bg-raised: #ffffff;
+  --bg-raised-2: #ece9e1;
+  --text: #191b1d;
+  --text-dim: #565d63;
+  --text-faint: #8a9096;
+  --border: #e1ddd2;
+  --border-strong: #cfc9ba;
+
+  --accent: #a86c15;
+  --accent-soft: #a86c1518;
+  --accent-ink: #fffaf0;
+
+  --accent-2: #1f766b;
+  --accent-2-soft: #1f766b16;
+
+  --shadow: 0 20px 50px -24px rgba(30, 25, 15, .18);
+}
